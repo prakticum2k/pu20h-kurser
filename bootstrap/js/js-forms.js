@@ -18,11 +18,15 @@ function formHandler() {
     document.querySelector('.output').innerHTML = output
 }
 
+//om localstorage.email inte finns...
 if(localStorage.email !== undefined) {
+// ...sparar vi den
     document.getElementById('exampleInputEmail1').value = localStorage.email
 }
 
 //ta bort enskillda localStorage poster:
-localStorage.removeItem('email')
+//localStorage.removeItem('email')
 //ta bort all localStorage med:
-localStorage.clear()
+function clearLS() {
+  localStorage.clear()
+}
